@@ -10,6 +10,7 @@ permissions:
   contents: read
   security-events: write
   actions: read
+  checks: write
 
 jobs:
   build-and-test:
@@ -42,6 +43,5 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker build -t myservice:latest -f MyService/Dockerfile .
-
-
+          cd ./MyService
+          docker build -t myservice:latest .

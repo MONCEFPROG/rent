@@ -3,6 +3,7 @@ package com.example.myservice.entities;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class CarTest {
 
     @Test
@@ -39,5 +40,10 @@ public class CarTest {
         Car car = new Car("ABC123", "Toyota", 15000.0);
         String expected = "Car{plateNumber='ABC123', brand='Toyota', price=15000.0}";
         assertEquals(expected, car.toString());
+    }
+    @Test
+    public void testIsExpensive() {
+        Car car = new Car("ABC123", "BMW", 45000.0);
+        assertTrue(car.isExpensive());
     }
 }

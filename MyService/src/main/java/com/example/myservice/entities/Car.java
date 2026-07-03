@@ -43,4 +43,7 @@ public class Car {
                 ", price=" + price +
                 '}';
     }
+    public boolean isExpensive() {
+    return this.price > 30000.0;
+}
 }
